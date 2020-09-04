@@ -1,13 +1,33 @@
+PImage webImg;
+  int startX = 500;
+  int startY = 500;
+  int endX = 500;
+  int endY = 500;
 void setup()
 {
-  size(300,300);
+  size(500,500);
+  // Load image
+  webImg = loadImage("bouncey.png", "png");
+  //startX = ((int)(Math.random()*476)+25);
+  background(200);
+  frameRate(10);
 }
 void draw()
 {
-  ellipse(20,20,20,20);
+  fill(200,200,200,30);
+  rect(0,0,500,500);
+  if(startY < endY){
+    if(!(startX < 0 || startY < 0)){
+      image(webImg, startX, startY,50,50);
+    }
+    startX += ((int)(Math.random()*50)-25);
+    startY += ((int)(Math.random()*25)-5);
+  }
 }
 void mousePressed()
 {
-
+  fill(200,200,200,30);
+  rect(0,0,500,500);
+  startX = ((int)(Math.random()*450));
+  startY = 0;
 }
-
