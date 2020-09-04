@@ -17,11 +17,17 @@ void draw()
   fill(200,200,200,30);
   rect(0,0,500,500);
   if(startY < endY){
-    if(!(startX < 0 || startY < 0)){
+    if(!(startX < 0 || startY < 0 || startX > 450)){
       image(webImg, startX, startY,50,50);
+    }else if (startX < 0){
+      startX += 50;
+    }else if(startX > 450){
+      startY += 10;
+    }else if(startX > 450){
+      startX -= 50;
     }
     startX += ((int)(Math.random()*50)-25);
-    startY += ((int)(Math.random()*25)-5);
+    startY += ((int)(Math.random()*31)-5);
   }
 }
 void mousePressed()
