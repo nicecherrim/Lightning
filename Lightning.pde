@@ -18,7 +18,8 @@ void draw()
   rect(0,0,500,500);
   if(startY < endY){
     if(!(startX < 0 || startY < 0 || startX > 450)){
-      image(webImg, startX, startY,50,50);
+      ellipse(startX, startY, 50,50);
+      //image(webImg, startX, startY,50,50);
     }else if (startX < 0){
       startX += 50;
     }else if(startX > 450){
