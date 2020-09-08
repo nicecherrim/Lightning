@@ -7,7 +7,8 @@ void setup()
 {
   size(500,500);
   // Load image
-  webImg = loadImage("bouncey.png", "png");
+  //webImg = loadImage("bouncey.png", "png");
+  webImg = loadImage("https://github.com/nicecherrim/Lightning/blob/master/bouncey.png?raw=true;", "png");
   //startX = ((int)(Math.random()*476)+25);
   background(200);
   frameRate(10);
@@ -18,8 +19,7 @@ void draw()
   rect(0,0,500,500);
   if(startY < endY){
     if(!(startX < 0 || startY < 0 || startX > 450)){
-      ellipse(startX, startY, 50,50);
-      //image(webImg, startX, startY,50,50);
+      image(webImg, startX, startY,100,100);
     }else if (startX < 0){
       startX += 50;
     }else if(startX > 450){
@@ -33,8 +33,8 @@ void draw()
 }
 void mousePressed()
 {
-  fill(200,200,200,30);
-  rect(0,0,500,500);
+  //fill(200,200,200,30);
+  //rect(0,0,500,500);
   startX = ((int)(Math.random()*450));
   startY = 0;
 }
