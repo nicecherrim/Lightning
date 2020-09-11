@@ -29,7 +29,7 @@ void setup()
 
 void draw() //fading effect, drawing Pusheens, and creating random movement
 {
-  fill(200, 200, 200, 100); //colors the rectangle and makes it slight transparent to give fading effect
+  fill(200, 200, 200, 150); //colors the rectangle and makes it slight transparent to give fading effect
   noStroke();
   rect(0, 0, 500, 500);
   //finish line
