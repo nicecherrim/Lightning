@@ -35,10 +35,10 @@ void draw() //fading effect, drawing Pusheens, and creating random movement
   //finish line
   stroke(20);
   strokeWeight(20);
-  line(0, 480, 500, 480);
+  line(0, 500, 500, 500);
   fill(0, 0, 0);
   textSize(50);
-  text("Finish", 150, 450);
+  text("Finish", 180, 480);
   //ellipse(0,startY, 20,20); //to test boundaries of image and canvas
   //drawing the Pusheens
   drawPupu(startX, startY, color1);
